@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de input em tabelas</title>
+    <style>
+        .fakeTabela {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            width: 80%;
+            margin: 0 10%;
+        }
+        .fakeTabela > div:nth-child(odd) {
+        background-color: #f2f2f2;
+        }
+        .fakeLinha {
+            display: flex;
+            height: auto;
+        }
+        .fakeLinha p, .fakeLinha input {
+            flex: 1;
+            margin: 10px;
+            text-align: center;
+        }
+        .fakeLinha input {
+            padding: 10px;
+            height: 14px;
+
+        }
+        table {
+            border-collapse: collapse;
+            border: none;
+            width: 80%;
+            margin: 0 10%;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border: none;
+        }
+        thead, .fakeTabela > div:first-child {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de input em tabelas</h1>
+    <h2>Parece tabela mas não é!</h2>
+        <div class="fakeTabela">
+            <div class="fakeLinha" aria-hidden="true">
+                <p>nome</p>
+                <p>sem acesso</p>
+                <p>visualizar</p>
+                <p>editar</p>
+            </div>
+            <div class="fakeLinha">
+                <p>Artur</p>
+                <input type="radio" name="coluna1c" value="Opção 1" aria-label="sem acesso">
+                <input type="radio" name="coluna1c" value="Opção 1" aria-label="visualizar">
+                <input type="radio" name="coluna1c" value="Opção 1" aria-label="editar">
+            </div>
+
+            <div class="fakeLinha">
+                <p>Beatrix</p>
+                <input type="radio" name="coluna2c" value="Opção 2" aria-label="sem acesso">
+                <input type="radio" name="coluna2c" value="Opção 2" aria-label="visualizar">
+                <input type="radio" name="coluna2c" value="Opção 2" aria-label="editar">
+            </div>
+
+            <div class="fakeLinha">
+                <p>Carlos</p>
+                <input type="radio" name="coluna3c" value="Opção 3" aria-label="sem acesso">
+                <input type="radio" name="coluna3c" value="Opção 3" aria-label="visualizar">
+                <input type="radio" name="coluna3c" value="Opção 3" aria-label="editar">
+            </div>
+
+            <div class="fakeLinha">
+                <p>Douglas</p>
+                <input type="radio" name="coluna4c" value="Opção 4" aria-label="sem acesso">
+                <input type="radio" name="coluna4c" value="Opção 4" aria-label="visualizar">
+                <input type="radio" name="coluna4c" value="Opção 4" aria-label="editar">
+            </div>
+
+            <div class="fakeLinha">
+                <p>Elaine</p>
+                <input type="radio" name="coluna5c" value="Opção 5" aria-label="sem acesso">
+                <input type="radio" name="coluna5c" value="Opção 5" aria-label="visualizar">
+                <input type="radio" name="coluna5c" value="Opção 5" aria-label="editar">
+            </div>
+        </div>
+    <h2>Tabela com 4 colunas</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>nome</th>
+                <th>sem acesso</th>
+                <th>visualizar</th>
+                <th>editar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Artur</td>
+                <td><input type="radio" name="coluna1" value="Opção 1"></td>
+                <td><input type="radio" name="coluna1" value="Opção 1"></td>
+                <td><input type="radio" name="coluna1" value="Opção 1"></td>
+            </tr>
+            <tr>
+                <td>Beatrix</td>
+                <td><input type="radio" name="coluna2" value="Opção 2"></td>
+                <td><input type="radio" name="coluna2" value="Opção 2"></td>
+                <td><input type="radio" name="coluna2" value="Opção 2"></td>
+            </tr>
+            <tr>
+                <td>Carlos</td>
+                <td><input type="radio" name="coluna3" value="Opção 3"></td>
+                <td><input type="radio" name="coluna3" value="Opção 3"></td>
+                <td><input type="radio" name="coluna3" value="Opção 3"></td>
+            </tr>
+            <tr>
+                <td>Douglas</td>
+                <td><input type="radio" name="coluna4" value="Opção 4"></td>
+                <td><input type="radio" name="coluna4" value="Opção 4"></td>
+                <td><input type="radio" name="coluna4" value="Opção 4"></td>
+            </tr>
+            <tr>
+                <td>Elaine</td>
+                <td><input type="radio" name="coluna5" value="Opção 5"></td>
+                <td><input type="radio" name="coluna5" value="Opção 5"></td>
+                <td><input type="radio" name="coluna5" value="Opção 5"></td>
+            </tr>
+            <tr>
+                <td>Fatima</td>
+                <td><input type="radio" name="coluna6" value="Opção 6"></td>
+                <td><input type="radio" name="coluna6" value="Opção 6"></td>
+                <td><input type="radio" name="coluna6" value="Opção 6"></td>
+            </tr>
+        </tbody>
+    </table>
+<h2>Tabela com 2 colunas</h2>
+    <table>
+        <thead>
+            <tr>
+                <td>nome</td>
+                <td>
+                    <div class="fakeLinha">
+                        <p>sem acesso</p> <p>visualizar</p> <p>editar</p>
+                    </div>
+
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Artur</td>
+                <td>
+                    <div class="fakeLinha">
+                        <input type="radio" name="coluna1b" value="Opção 1" aria-label="sem acesso" >
+                        <input type="radio" name="coluna1b" value="Opção 1" aria-label="visualizar">
+                        <input type="radio" name="coluna1b" value="Opção 1" aria-label="editar">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Beatrix</td>
+                <td>
+                    <div class="fakeLinha">
+                        <input type="radio" name="coluna2b" value="Opção 2" aria-label="sem acesso">
+                        <input type="radio" name="coluna2b" value="Opção 2" aria-label="visualizar">
+                        <input type="radio" name="coluna2b" value="Opção 2" aria-label="editar">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Carlos</td>
+                <td>
+                    <div class="fakeLinha">
+                        <input type="radio" name="coluna3b" value="Opção 3" aria-label="sem acesso">
+                        <input type="radio" name="coluna3b" value="Opção 3" aria-label="visualizar">
+                        <input type="radio" name="coluna3b" value="Opção 3" aria-label="editar">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Douglas</td>
+                <td>
+                    <div class="fakeLinha">
+                        <input type="radio" name="coluna4b" value="Opção 4" aria-label="sem acesso">
+                        <input type="radio" name="coluna4b" value="Opção 4" aria-label="visualizar">
+                        <input type="radio" name="coluna4b" value="Opção 4" aria-label="editar">
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
